@@ -18,7 +18,7 @@ class Line:
         if self.date_match:
             return LineType.DATE
         elif self.header_match:
-            return LineType.TIME
+            return LineType.HEADER
         else:
             return LineType.OTHER
 

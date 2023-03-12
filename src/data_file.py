@@ -19,7 +19,7 @@ class DataFile():
             line = Line(text)
             if line.type == LineType.DATE:
                 datelist.append(line.content)  # type: ignore
-            elif line.type == LineType.TIME:
+            elif line.type == LineType.HEADER:
                 args = (datelist[-1], ) + line.content  # type: ignore
                 messages.append(Message(*args))
             else:
